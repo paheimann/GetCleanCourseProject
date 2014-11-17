@@ -34,12 +34,20 @@ In addition, there were two summary files of interest:
 This is the input that we converted into a tidy data set.
 
 In order to do this conversion, we had to do several transformations:
+
 1. Read the training and test files, and combine their rows into a single table, using rbind()
+
 2. Label the 561 columns of this table with the corresponding summary measure
+ 
 3. Convert the list of activity indices into a list of activity descriptions, and add that as an additional column to the table
+
 4. Add the list of subjects as an additional column to the table
+
 5. Extract only the summary measures of interest, which are the means and standard deviations of the raw and mechanical measures.  There were 68 such summary measures of interest.
 
 In order to create the second tidy data set, we had to do one additional transformation:
+
 6. Compute the mean for each of the summary measures of interest, grouped by the combination of activity and subject.  There were 180 such groupings for the 6 activities and 30 subjects.
 
+
+The result is the deliverable for this project.
