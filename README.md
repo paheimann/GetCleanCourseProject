@@ -47,7 +47,7 @@ In order to do this conversion, we had to do several transformations:
 
 In order to create the second tidy data set, we had to do one additional transformation:
 
-6. Compute the mean for each of the summary measures of interest, grouped by the combination of activity and subject.  There were 180 such groupings for the 6 activities and 30 subjects.
+6. Compute the mean for each of the summary measures of interest, grouped by the combination of activity and subject.  There were 180 such groupings for the 6 activities and 30 subjects. 
 
 
 The result is the deliverable for this project.
