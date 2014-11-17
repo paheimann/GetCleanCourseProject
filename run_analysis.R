@@ -21,7 +21,7 @@ DT <- rbind(
         read.table("UCI HAR Dataset/train/X_train.txt",colClasses="numeric",col.names=ColNames),
         read.table("UCI HAR Dataset/test/X_test.txt",colClasses="numeric",col.names=ColNames) )
         
-## Read and add activity array, convert activity indices to labels
+## Read activity arrays, convert activity indices to labels
 activities <- rbind(
         read.table("UCI HAR Dataset/train/y_train.txt",colClasses="numeric",
                 col.names="activities_index"),
@@ -36,6 +36,8 @@ subjects <- rbind(
                 col.names="subjects_index"),
         read.table("UCI HAR Dataset/test/subject_test.txt",colClasses="numeric",
                 col.names="subjects_index") )
+
+## Add activity-label and subject arrays to data table
 DT <- data.table(DT,activity=activities$activity,subject=subjects$subjects_index)
 
 
@@ -50,21 +52,19 @@ include[563] <- TRUE
 selected <- subset(DT,,include)
 ## This is the deliverable for steps 1-4
 
-## 3. Use descriptive activity names to name the activities in the data set
-
+## 3. Use descriptive activity names to name the activities in the data set.
 ## We used activity_lables.txt to translate from activity index to a descriptive label
 ## (see item 1 above)
 
 
-## 4.Appropriately label the data set with descriptive variable names
-
+## 4.Appropriately label the data set with descriptive variable names.
 ## We assume that the existing column names in features.txt are sufficiently descriptive.
 ## We used those labels as arguments to col.names when we read the data into a table
 ## (see item 1 above)
 
 
 ## 5. From the data set in step 4, create a second, independent tidy data set
-##  with the average of each variable for each activity and each subject
+##  with the average of each variable for each activity and each subject.
 
 ## Set key for grouping
 setkey(selected,activity,subject)
