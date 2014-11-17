@@ -18,13 +18,17 @@ These 128 readings were summarized, using statistics such as mean, standard devi
 
 The 30 volunteers were separated into two groups, train and test, and their summarized measures were placed into two separate files.
 
-The end result was two sets of files, one for the training subjects and one for the test subject.  Each set had the following files:
+The end result was two sets of files, one for the training subjects and one for the test subjects.  Each set had the following files:
 > X: The 561 summary measures for each combination of subject/measure/run
+
 > y: The activity corresponding to each row in X, expressed as an index (1-6)
+
 > subject: The subject (volunteer) corresponding to each row in X
+
 
 In addition, there were two summary files of interest:
 > activity_labels: A lookup table between activity index and activity description
+
 > features.txt: A lookup table between summary measures (feature) and the column of the X matrix
 
 This is the input that we converted into a tidy data set.
