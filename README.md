@@ -23,7 +23,7 @@ The end result was two sets of files, one for the training subjects and one for 
 
 > y: The activity corresponding to each row in X, expressed as an index (1-6)
 
-> subject: The subject (volunteer) corresponding to each row in X
+> subject: The subject (volunteer) corresponding to each row in X, expressed as an ID number (1-30)
 
 
 In addition, there were two summary files of interest:
